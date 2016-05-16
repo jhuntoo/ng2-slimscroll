@@ -81,9 +81,9 @@ export class SlimScroll {
   }
 
   private getBarHeight(): void {
-    let barHeight = Math.max((this.el.offsetHeight / this.el.scrollHeight) * this.el.offsetHeight, 30) + 'px';
+    let barHeight = Math.max((this.el.offsetHeight / this.el.scrollHeight) * this.el.offsetHeight, 30);
     let display = barHeight === this.el.offsetHeight ? 'none' : 'block';
-    this.dom.setStyle(this.bar, 'height', barHeight);
+    this.dom.setStyle(this.bar, 'height', `${barHeight}px`);
     this.dom.setStyle(this.bar, 'display', display);
   }
 
